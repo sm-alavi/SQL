@@ -3,8 +3,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER FUNCTION [dbo].[FN_WS_MonthlyReport_DeliveredWellsStatus]
+CREATE FUNCTION [dbo].[FN_WS_MonthlyReport_DeliveredWellsStatus]
 (
+	-- Persian date as function input variables,
 	@date1 nvarchar(10),
 	@date2 nvarchar(10) 
 )

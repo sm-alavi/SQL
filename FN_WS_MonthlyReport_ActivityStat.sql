@@ -1,18 +1,12 @@
-USE [PRCC2]
-GO
-/****** Object:  UserDefinedFunction [dbo].[FN_WS_MonthlyReport_ActivityStat]    Script Date: 1/4/2023 4:06:33 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
--- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-ALTER FUNCTION [dbo].[FN_WS_MonthlyReport_ActivityStat]
+
+
+CREATE FUNCTION [dbo].[FN_WS_MonthlyReport_ActivityStat]
 (	
-	-- Add the parameters for the function here
+	-- Persian date range
 	@date1 as nvarchar(10), 
 	@date2 as nvarchar(10)
 )
@@ -54,7 +48,6 @@ group by description)
 		where title is not null
 		)
 
---select * from q5 where title is not null
 select * from q10 where title is not null
 
 
